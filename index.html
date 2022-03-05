@@ -279,12 +279,16 @@
                         <td>' + (feature.properties['KECAMATAN'] !== null ? autolinker.link(feature.properties['KECAMATAN'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <th scope="row">KELURAHAN</th>\
+                        <td>' + (feature.properties['DESA'] !== null ? autolinker.link(feature.properties['DESA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
                         <th scope="row">ID KELURAHAN</th>\
                         <td>' + (feature.properties['ID2013'] !== null ? autolinker.link(feature.properties['ID2013'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KELURAHAN</th>\
-                        <td>' + (feature.properties['DESA'] !== null ? autolinker.link(feature.properties['DESA'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">NAMA LURAH</th>\
+                        <td>' + (feature.properties['nmkepdesa'] !== null ? autolinker.link(feature.properties['nmkepdesa'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">PENDUDUK LAKI-LAKI</th>\
@@ -301,10 +305,6 @@
                     <tr>\
                         <th scope="row">JUMLAH KEPALA KELUARGA</th>\
                         <td>' + (feature.properties['kk20'] !== null ? autolinker.link(feature.properties['kk20'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">NAMA LURAH</th>\
-                        <td>' + (feature.properties['nmkepdesa'] !== null ? autolinker.link(feature.properties['nmkepdesa'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
